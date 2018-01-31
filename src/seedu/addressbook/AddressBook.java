@@ -22,10 +22,9 @@ import java.util.HashSet;
 import java.util.Optional;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.HashMap;
 
 /*
- * NOTE : =============================================================
- * This class header comment below is brief because details of how to
  * use this class are documented elsewhere.
  * ====================================================================
  */
