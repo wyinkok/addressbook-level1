@@ -282,6 +282,8 @@ public class AddressBook {
 
         if(args.length == 0) {
             setupDefaultFileForStorage();
+        } else {
+            System.out.println("Incorrect Input. Please check your input.");
         }
     }
 
