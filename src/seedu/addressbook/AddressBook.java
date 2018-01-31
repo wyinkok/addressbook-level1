@@ -264,7 +264,11 @@ public class AddressBook {
     }
 
     /**
+     * Week 3.6 LOs: Does not describe each of the if statements
+     * but just generally what it check. Write to the Reader.
+     * Alt: I process the program.. If I find that ... then
      * Processes the program main method run arguments.
+     *
      * If a valid storage file is specified, sets up that file for storage.
      * Otherwise sets up the default file for storage.
      *
@@ -282,6 +286,8 @@ public class AddressBook {
 
         if(args.length == 0) {
             setupDefaultFileForStorage();
+        } else {
+            System.out.println("Incorrect Input. Please check your input.");
         }
     }
 
@@ -907,6 +913,7 @@ public class AddressBook {
     }
 
     /**
+     * Week 3.6 LO: What & Possibly why? No How
      * Encodes a person into a decodable and readable string representation.
      *
      * @param person to be encoded
