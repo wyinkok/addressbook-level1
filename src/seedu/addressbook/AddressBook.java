@@ -33,6 +33,8 @@ import java.util.HashMap;
  * This class is used to maintain a list of person data which are saved
  * in a text file.
  **/
+
+/* Week 3.4 LO: AddressBook Class is used and it is a noun */
 public class AddressBook {
 
     /**
@@ -217,11 +219,11 @@ public class AddressBook {
         showWelcomeMessage();
         processProgramArgs(args);
         loadDataFromStorage();
-        processCommands();
+        displayCommandOutput();
         return;
     }
 
-    private static void processCommands() {
+    private static void displayCommandOutput() {
         while (true) {
             String userCommand = getUserInput();
             echoUserCommand(userCommand);
