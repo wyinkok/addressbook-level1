@@ -615,10 +615,10 @@ public class AddressBook {
         System.out.print(LINE_PREFIX + "Enter command: ");
         String inputLine = SCANNER.nextLine();
         // silently consume all blank and comment lines
-        return ifBlankLine(inputLine);
+        return ignoreComments(inputLine);
     }
 
-    private static String ifBlankLine(String inputLine) {
+    private static String ignoreComments(String inputLine) {
         while (inputLine.trim().isEmpty() || inputLine.trim().charAt(0) == INPUT_COMMENT_MARKER) {
             inputLine = SCANNER.nextLine();
         }
