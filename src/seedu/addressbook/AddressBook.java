@@ -351,7 +351,8 @@ public class AddressBook {
      * If a file already exists, it must be a regular file.
      */
     private static boolean hasValidFileName(Path filePath) {
-        return filePath.getFileName().toString().lastIndexOf('.') > 0
+        final boolean isValidFileName = filePath.getFileName().toString().lastIndexOf('.') > 0;
+        return isValidFileName
                 && (!Files.exists(filePath) || Files.isRegularFile(filePath));
     }
 
@@ -645,7 +646,7 @@ public class AddressBook {
         }
     }
 
-    private static void showToUserNoVarArg(String[] message) {
+    private static void showToUserWithNoVarArg(String[] message) {
         for (String m : message) {
             System.out.println(LINE_PREFIX + m);
         }
