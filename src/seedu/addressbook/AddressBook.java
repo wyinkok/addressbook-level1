@@ -507,11 +507,19 @@ public class AddressBook {
         final ArrayList<String[]> matchedPersons = new ArrayList<>();
         for (String[] person : getAllPersonsInAddressBook()) {
             final Set<String> wordsInName = new HashSet<>(splitByWhitespace(getNameFromPerson(person)));
-            if (!Collections.disjoint(wordsInName, keywords)) {
+            if (!Collections.disjoint(changeToLowerCase(wordsInName), changeToLowerCase(keywords))) {
                 matchedPersons.add(person);
             }
         }
         return matchedPersons;
+    }
+
+    private static Set<String> changeToLowerCase(Collection<String> stringCollection){
+        Set<String> stringSet = new HashSet<String>();
+        for (String s:stringCollection){
+            stringSet.add(s.toLowerCase());
+        }
+        return stringSet;
     }
 
     /**
